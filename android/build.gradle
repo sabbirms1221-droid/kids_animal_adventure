@@ -1,22 +1,5 @@
 plugins {
-    id "com.android.application"
-    id "kotlin-android"
-    id "dev.flutter.flutter-gradle-plugin"
-}
-
-android {
-    namespace = "com.kids.animal.adventure"
-    compileSdk = 35
-
-    defaultConfig {
-        applicationId = "com.kids.animal.adventure"
-        minSdk = 23
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
-    }
-}
-
-flutter {
-    source = "../.."
+    id "com.android.application" version "8.6.1" apply false
+    id "org.jetbrains.kotlin.android" version "2.1.0" apply false
+    id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
 }
