@@ -7,6 +7,10 @@ workflows:
       flutter: stable
 
     scripts:
+      - name: Configure Flutter SDK
+        script: |
+          echo "flutter.sdk=$FLUTTER_ROOT" > "$CM_BUILD_DIR/android/local.properties"
+
       - name: Get Flutter packages
         script: |
           flutter pub get
