@@ -11,6 +11,11 @@ workflows:
         script: |
           echo "flutter.sdk=$FLUTTER_ROOT" > "$CM_BUILD_DIR/android/local.properties"
 
+      - name: Prepare Flutter
+        script: |
+          flutter doctor -v
+          flutter precache --android
+
       - name: Get Flutter packages
         script: |
           flutter pub get
